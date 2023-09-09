@@ -9,7 +9,7 @@ instance/
 .env
 *.txt
 *.json
-
+migrations/
 
 
 *.py[cod]
