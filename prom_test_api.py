@@ -82,7 +82,7 @@ def main():
     if not order_list['orders']:
         raise Exception('Sorry, there\'s no any order!')
 
-    pprint.pprint(api_example.get_order_list())
+   # pprint.pprint(api_example.get_order_list())
 
     # Order example data. Requred to be setup to get example work
     order_id = order_list['orders'][0]['id']
@@ -90,7 +90,11 @@ def main():
     # Setting order status
 
     # # Getting order by id
-    pprint.pprint(api_example.get_order(order_id))
+    #pprint.pprint(api_example.get_order(order_id))
+
+    with open(file_name, 'w', encoding='utf-8') as file:
+       json.dump(order_list, file, indent=4, ensure_ascii=False)
+
     
 
 
